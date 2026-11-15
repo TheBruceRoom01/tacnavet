@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Fragmentos</title></head>
+<body>
+
+<!-- SIDEBAR  -->
+<aside class="sis-sidebar" th:fragment="sidebar(activo)">
+  <div class="sis-logo">
+    <img th:src="@{/galeria/logo.png}" alt="TacnaVet">
+    <div>
+      <p class="sis-logo-nombre">TacnaVet</p>
+      <p class="sis-logo-sub">Panel de gestión</p>
+    </div>
+  </div>
+
+  <nav class="sis-menu">
+    <a th:href="@{/sistema/usuarios}" class="sis-menu-link"
+       th:classappend="${activo == 'usuarios'} ? 'activo' : ''">
+      <span class="ico">group</span> Usuarios
+    </a>
+    <a th:href="@{/sistema/mascotas}" class="sis-menu-link"
+       th:classappend="${activo == 'mascotas'} ? 'activo' : ''">
+      <span class="ico">pets</span> Mascotas
+    </a>
+    <a class="sis-menu-link sis-menu-pronto" href="#">
+      <span class="ico">event_available</span> Citas
+      <span class="sis-badge-pronto">Pronto</span>
+    </a>
+  </nav>
+
+  <div class="sis-sidebar-pie">
+    <a th:href="@{/}" class="sis-link-volver">
+      <span class="ico">public</span> Ver sitio web
+    </a>
+  </div>
+</aside>
+
+<!-- TOPBAR  -->
+<header class="sis-topbar" th:fragment="topbar(titulo)">
+  <h1 class="sis-topbar-tit" th:text="${titulo}">Título</h1>
+  <div class="sis-topbar-user">
+    <span class="sis-user-rol" th:text="${usuarioLog.rol}">ADMIN</span>
+    <span class="sis-user-nom" th:text="${usuarioLog.nombres} + ' ' + ${usuarioLog.apellidos}">Usuario</span>
+    <a th:href="@{/logout}" class="btn btn-prim sis-btn-salir">
+      <span class="ico">logout</span> Salir
+    </a>
+  </div>
+</header>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+/* mensaje de error para el login  */
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(186, 26, 26, 0.08);
+  border: 1px solid rgba(186, 26, 26, 0.3);
+  color: #ba1a1a;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.login-error .ico { font-size: 20px; }
+
+/* Estructura general del panel */
+.sis-body { background-color: var(--color-bg); }
+
+.sis-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sis-sidebar {
+  background-color: var(--color-dark);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.sis-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+.sis-logo img {
+  height: 40px;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 4px;
+}
+.sis-logo-nombre {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-primary-light);
+}
+.sis-logo-sub { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+
+.sis-menu { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.sis-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background var(--transition), color var(--transition);
+}
+.sis-menu-link .ico { font-size: 22px; }
+.sis-menu-link:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.sis-menu-link.activo { background-color: var(--color-primary); color: #fff; }
+
+.sis-menu-pronto { opacity: 0.45; cursor: not-allowed; }
+.sis-badge-pronto {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.sis-sidebar-pie { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 16px; }
+.sis-link-volver {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+.sis-link-volver:hover { color: var(--color-primary-light); }
+.sis-link-volver .ico { font-size: 18px; }
+
+/* Topbar  */
+.sis-principal { display: flex; flex-direction: column; min-width: 0; }
+
+.sis-topbar {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.sis-topbar-tit { font-family: var(--font-heading); font-size: 22px; }
+
+.sis-topbar-user { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.sis-user-rol {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-soft);
+  border: 1px solid rgba(14, 159, 110, 0.25);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.sis-user-nom { font-weight: 700; font-size: 14px; }
+.sis-btn-salir { padding: 10px 18px; font-size: 13px; }
+
+/*  Contenido y tarjetas  */
+.sis-contenido { padding: 32px; }
+
+.sis-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.sis-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+.sis-card-tit { font-family: var(--font-heading); font-size: 17px; }
+
+/*  Tabla  */
+.sis-tabla-wrap { overflow-x: auto; }
+.sis-tabla { width: 100%; border-collapse: collapse; font-size: 14px; }
+.sis-tabla thead { background-color: var(--color-bg-alt); }
+.sis-tabla th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+.sis-tabla td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.sis-tabla tbody tr:hover { background-color: rgba(14, 159, 110, 0.04); }
+.sis-vacio { text-align: center; color: var(--color-text-muted); padding: 32px !important; }
+
+/*  Badges de rol  */
+.sis-rol {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.sis-rol-admin { background: rgba(14, 159, 110, 0.12); color: var(--color-primary-dark); }
+.sis-rol-veterinario { background: rgba(59, 130, 246, 0.12); color: #1d4ed8; }
+.sis-rol-recepcionista { background: rgba(245, 158, 11, 0.18); color: #b45309; }
+
+/*  Botones de tabla  */
+.sis-acciones { display: flex; gap: 8px; white-space: nowrap; }
+.sis-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+.sis-btn .ico { font-size: 18px; }
+.sis-btn-editar { color: #1d4ed8; background: rgba(59, 130, 246, 0.1); }
+.sis-btn-editar:hover { background: rgba(59, 130, 246, 0.22); }
+.sis-btn-eliminar { color: #ba1a1a; background: rgba(186, 26, 26, 0.08); }
+.sis-btn-eliminar:hover { background: rgba(186, 26, 26, 0.2); }
+
+/*  Formularios  */
+.sis-form { padding: 24px; }
+.sis-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; }
+.sis-form-botones { margin-top: 24px; display: flex; justify-content: flex-end; }
+
+/*  Alertas  */
+.sis-alerta-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(186, 26, 26, 0.08);
+  border: 1px solid rgba(186, 26, 26, 0.3);
+  color: #ba1a1a;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* - Responsibidad  */
+@media (max-width: 900px) {
+  .sis-layout { grid-template-columns: 1fr; }
+  .sis-sidebar { position: static; height: auto; }
+  .sis-menu { flex-direction: row; flex-wrap: wrap; }
+  .sis-sidebar-pie { display: none; }
+  .sis-contenido { padding: 16px; }
+  .sis-topbar { padding: 12px 16px; }
+  .sis-form-grid { grid-template-columns: 1fr; }
+}

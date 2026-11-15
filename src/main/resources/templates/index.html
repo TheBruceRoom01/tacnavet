@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TacnaVet - Cuidado para tu familia</title>
+  <meta name="description" content="Clínica veterinaria en Tacna: medicina general, cirugía, laboratorio clínico, peluquería y vacunación para tu mascota.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#inicio" class="nav-logo">
+      <img th:src="@{/galeria/logo.png}" alt="Logo TacnaVet" class="nav-logo-img">
+      <span>TacnaVet</span>
+    </a>
+
+    <nav class="nav-menu" id="menu">
+      <ul class="nav-enlaces">
+        <li><a href="#inicio" class="nav-link activo" data-nav-link>Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link" data-nav-link>Nosotros</a></li>
+        <li><a href="#servicios" class="nav-link" data-nav-link>Servicios</a></li>
+        <li><a href="#instalaciones" class="nav-link" data-nav-link>Instalaciones</a></li>
+        <li><a href="#testimonios" class="nav-link" data-nav-link>Testimonios</a></li>
+        <li><a href="#contacto" class="nav-link" data-nav-link>Contacto</a></li>
+      </ul>
+      <a th:href="@{/login}" class="btn btn-prim nav-cta">
+        <span class="ico">login</span>
+        Acceder
+      </a>
+    </nav>
+
+    <button class="nav-toggle" id="boton-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-fondo" id="fondo-menu"></div>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-in">
+      <div class="hero-cont" data-reveal>
+        <span class="hero-badge">
+          <span class="ico">verified</span>
+          Excelencia clínica y trato humano
+        </span>
+        <h1 class="hero-tit">Cuidado para tu <span class="hero-res">familia </span>de 4 patas</h1>
+        <p class="hero-txt">
+          En TacnaVet combinamos un entorno relajante y cuidado personalizado.
+          Ofrecemos atención veterinaria premium con tecnología de punta y un equipo dedicado para
+          asegurar el bienestar de tu lomito.
+        </p>
+        <div class="hero-btns">
+          <a href="#contacto" class="btn btn-prim">
+            <span class="ico">calendar_month</span>
+            Agendar Consulta
+          </a>
+          <a href="#servicios" class="btn btn-borde">
+            <span class="ico">medical_services</span>
+            Nuestros Servicios
+          </a>
+        </div>
+        <div class="hero-social">
+          <div class="hero-avatares">
+           <!-- <img src="" alt="Cliente feliz" class="hero-avatar"> -->
+          </div>
+          <div class="hero-social-txt">
+            <p class="hero-fam">200+ Familias Felices</p>
+            <p class="hero-rating"><span class="ico ico-lleno">star</span> 5.0 de calificación</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img-wrap" data-reveal>
+        <img th:src="@{/galeria/hero.jpg}" alt="Imagen Hero" class="hero-img">
+        <div class="hero-img-pie">
+          <p class="hero-pie-tit">Cuidado y profesionalismo</p>
+          <p class="hero-pie-txt">Instalaciones de primer nivel para tu familia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nos" id="nosotros">
+    <div class="nos-in">
+      <div class="nos-card" data-reveal>
+        <img th:src="@{/galeria/nosotros.jpg}" alt="" class="nos-fondo" aria-hidden="true">
+        
+        <div class="nos-sombra"></div>
+
+        <div class="nos-cont">
+          <div class="nos-txt">
+            <h2 class="sec-tit sec-tit-izq">
+              <span class="ico">favorite</span>
+              Sobre Nosotros
+            </h2>
+            <p class="nos-lead">
+              Nuestra misión es proporcionar atención médica de la más alta calidad en un
+              ambiente que promueva la tranquilidad y la sanación para tu peludito. Creemos firmemente que la salud
+              integral de las mascotas florece mejor cuando la excelencia clínica y la tecnología
+              avanzada se encuentran con un entorno compasivo, cálido y libre de estrés
+            </p>
+
+            <div class="nos-feats">
+              <div class="feat">
+                <div class="feat-ico"><span class="ico ico-lleno">biotech</span></div>
+                <div>
+                  <h4 class="feat-tit">Tecnología Avanzada</h4>
+                  <p class="feat-txt">Diagnósticos precisos y rápidos con equipos de última generación</p>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="feat-ico"><span class="ico ico-lleno">handshake</span></div>
+                <div>
+                  <h4 class="feat-tit">Cuidado Empático</h4>
+                  <p class="feat-txt">Trato compasivo y completamente personalizado para tu mascota</p>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="feat-ico"><span class="ico ico-lleno">local_hospital</span></div>
+                <div>
+                  <h4 class="feat-tit">Staff Experto</h4>
+                  <p class="feat-txt">Veterinarios altamente calificados y en constante actualización</p>
+                </div>
+              </div>
+              <div class="feat">
+                <div class="feat-ico"><span class="ico ico-lleno">spa</span></div>
+                <div>
+                  <h4 class="feat-tit">Entorno Relajante</h4>
+                  <p class="feat-txt">Instalaciones diseñadas específicamente para reducir la ansiedad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nos-img-col">
+            <img th:src="@{/galeria/nostros2.jpg}" alt="Veterinaria sonriendo con un perro" class="nos-img">
+            <div class="nos-badge">
+              <div class="nos-badge-top">
+                <span class="ico">verified</span>
+                <span class="nos-badge-num">10+</span>
+              </div>
+              <p class="nos-badge-txt">Años de experiencia brindando salud y cuidado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="serv" id="servicios">
+    <div class="serv-in">
+      <div class="sec" data-reveal>
+        <span class="sec-ojal">Áreas de Especialidad</span>
+        <h2 class="sec-tit">Servicios Médicos Integrales</h2>
+        <p class="sec-txt">Ofrecemos atención completa bajo un mismo techo, con áreas especializadas diseñadas para la comodidad, salud y bienestar total de tu mascota en cada etapa de su vida</p>
+      </div>
+
+      <div class="serv-grid" data-reveal>
+        <article class="serv-card serv-card-dest">
+          <img th:src="@{/galeria/servicio.jpg}" alt="Veterinaria auscultando a un gato" class="serv-card-bg">
+          <div class="serv-card-grad"></div>
+          <div class="serv-card-cont">
+            <div class="serv-card-ico"><span class="ico">stethoscope</span></div>
+            <h3 class="serv-card-tit">Medicina General Integral</h3>
+            <p class="serv-card-txt">Chequeos preventivos, diagnósticos detallados y planes de tratamiento personalizados para mantener la vitalidad y longevidad de tu fiel compañero</p>
+            <a href="#contacto" class="serv-card-link" data-service="Consulta General">
+              Conocer más <span class="ico">arrow_forward</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="serv-card">
+          <div class="serv-card-ico-simple"><span class="ico">emergency</span></div>
+          <h3 class="serv-card-tit-osc">Cirugía Segura</h3>
+          <p class="serv-card-txt-sil">Procedimientos quirúrgicos con monitoreo constante, protocolos anestésicos avanzados y cuidados post-operatorios</p>
+          <a href="#contacto" class="serv-card-link-sil" data-service="Cirugía">Ver detalles <span class="ico">chevron_right</span></a>
+        </article>
+
+        <article class="serv-card">
+          <div class="serv-card-ico-simple"><span class="ico">science</span></div>
+          <h3 class="serv-card-tit-osc">Laboratorio Clínico</h3>
+          <p class="serv-card-txt-sil">Análisis de sangre, orina y tejidos rápidos y precisos para decisiones médicas inmediatas y acertadas</p>
+          <a href="#contacto" class="serv-card-link-sil" data-service="Otro">Ver detalles <span class="ico">chevron_right</span></a>
+        </article>
+
+        <article class="serv-card">
+          <div class="serv-card-ico-simple"><span class="ico">content_cut</span></div>
+          <h3 class="serv-card-tit-osc">Peluquería &amp; Spa</h3>
+          <p class="serv-card-txt-sil">Cuidado estético, baños medicados y cortes con productos pde buena calidad</p>
+          <a href="#contacto" class="serv-card-link-sil" data-service="Peluquería">Ver detalles <span class="ico">chevron_right</span></a>
+        </article>
+
+        <article class="serv-card serv-card-ancho">
+          <div class="serv-card-ico-round"><span class="ico">vaccines</span></div>
+          <div class="serv-card-wide-txt">
+            <h3 class="serv-card-tit">Programa de Vacunación y Prevención</h3>
+            <p class="serv-card-txt">Esquemas de inmunización actualizados, control de parásitos internos y externos ademas, asesoría nutricional de tu mascota contra enfermedades</p>
+            <button type="button" class="btn btn-blanco" data-service="Vacunación" data-scroll-to="#contacto">Agendar Vacuna</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="inst" id="instalaciones">
+    <div class="inst-in">
+      <div class="inst-head" data-reveal>
+        <div class="inst-head-txt">
+          <span class="sec-ojal">Nuestro Entorno</span>
+          <h2 class="sec-tit sec-tit-izq">Instalaciones Modernas</h2>
+          <p class="sec-txt">Espacios modernos diseñados para garantizar la máxima higiene, eficiencia médica y sobre todo la tranquilidad y comodidad de tu mascota durante su visita</p>
+        </div>
+        <a href="#contacto" class="inst-link">Ver Tour Virtual <span class="ico">360</span></a>
+      </div>
+
+      <div class="inst-gal" data-reveal>
+        <div class="gal-item gal-item-main">
+          <img th:src="@{/galeria/sala.jpg}" alt="Amplia y moderna sala de espera">
+          <div class="gal-item-overlay"></div>
+          <div class="gal-item-pie">
+            <p class="gal-pie-tit">Recepción y Sala de Espera</p>
+            <p class="gal-pie-txt">Zonas separadas para perros y gatos</p>
+          </div>
+        </div>
+        <div class="gal-item gal-item-sm">
+          <img th:src="@{/galeria/consulta.jpg}" alt="Consultorio médico equipado">
+          <div class="gal-item-overlay"></div>
+          <div class="gal-item-pie gal-pie-sm">
+            <p class="gal-pie-tit">Consultorios</p>
+          </div>
+        </div>
+        <div class="gal-item gal-item-sm">
+          <img th:src="@{/galeria/operacion.jpg}" alt="Área de quirófano veterinario">
+          <div class="gal-item-overlay"></div>
+          <div class="gal-item-pie gal-pie-sm">
+            <p class="gal-pie-tit">Quirófano Especializado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="test" id="testimonios">
+    <div class="test-in">
+      <div class="sec" data-reveal>
+        <span class="sec-ojal">Historias de clientes</span>
+        <h2 class="sec-tit">Lo que dicen nuestras familias</h2>
+        <p class="sec-txt">La confianza de nuestros clientes es nuestro mayor orgullo. Lee las experiencias de quienes ya confían en TacnaVet</p>
+      </div>
+
+      <div class="test-track" id="track-testimonios" data-reveal>
+        <article class="test-card">
+          <span class="test-comilla">TacnaVet</span>
+          <div class="test-stars">
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+          </div>
+          <p class="test-txt">"Excelente atención, el doctor fue increíblemente paciente con mi perro miedoso. Las instalaciones son de primera, muy limpias y acogedoras. Definitivamente volveremos"</p>
+          <div class="test-autor">
+            
+            <div>
+              <p class="test-nom">Fredy Quispe</p>
+              <p class="test-masc">Dueño de 'Tatto' (Shitzu)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="test-card test-card-dest">
+          <span class="test-comilla">TacnaVet</span>
+          <div class="test-stars">
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+          </div>
+          <p class="test-txt">"El mejor lugar en Tacna para llevar a tu mascota. El servicio de peluquería es increíble, mi Poodle quedó hermoso y lo más importante, no salió estresado. Atención 10/10"</p>
+          <div class="test-autor">
+            
+            <div>
+              <p class="test-nom">Juana Pérez</p>
+              <p class="test-masc">Dueña de 'Bela' (Poodle)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="test-card">
+          <span class="test-comilla">TacnaVet</span>
+          <div class="test-stars">
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico ico-lleno">star</span>
+            <span class="ico">star_half</span>
+          </div>
+          <p class="test-txt">"Muy profesionales y empáticos. Llegué con una emergencia y salvaron a mi gatito de una intoxicación. Explicaron todo el proceso claramente. Estaré eternamente agradecida con el equipo"</p>
+          <div class="test-autor">
+            
+            <div>
+              <p class="test-nom">Laura Gómez</p>
+              <p class="test-masc">Dueña de 'Michi' (Gato Mestizo)</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="test-puntos" id="puntos-testimonios"></div>
+    </div>
+  </section>
+
+  <section class="cont" id="contacto">
+    <div class="cont-in">
+      <div class="sec" data-reveal>
+        <span class="sec-ojal">Estamos para ti</span>
+        <h2 class="sec-tit">Ponte en Contacto</h2>
+        <p class="sec-txt">¿Tienes dudas o necesitas agendar una cita? Escríbenos o visítanos nuestro equipo está listo para recibir a tu mascota fiel</p>
+      </div>
+
+      <div class="cont-card" data-reveal>
+        <div class="cont-info">
+          <h3 class="cont-info-tit">Información de Contacto</h3>
+          <ul class="cont-info-list">
+            <li class="cont-info-item">
+              <span class="ico">location_on</span>
+              <div>
+                <p class="cont-info-label">Nuestra Clínica</p>
+                <p class="cont-info-txt">Av. San Martín 781, Cercado<br>Tacna, Perú</p>
+              </div>
+            </li>
+            <li class="cont-info-item">
+              <span class="ico">phone</span>
+              <div>
+                <p class="cont-info-label">Llámanos</p>
+                <p class="cont-info-txt">Emergencias: +51 993076339<br>Consultas: +51 (052) 123 456</p>
+              </div>
+            </li>
+            <li class="cont-info-item">
+              <span class="ico">schedule</span>
+              <div>
+                <p class="cont-info-label">Horario de Atención</p>
+                <p class="cont-info-txt">Lunes - Sábado: 9:00 AM - 8:00 PM<br>Domingos: 9:00 AM - 1:00 PM<br>Emergencias 24/7</p>
+              </div>
+            </li>
+            <li class="cont-info-item">
+              <span class="ico">mail</span>
+              <div>
+                <p class="cont-info-label">Escríbenos</p>
+                <p class="cont-info-txt">info@tacnavet.com<br>citas@tacnavet.com</p>
+              </div>
+            </li>
+          </ul>
+          <div class="cont-social">
+            <a href="#" class="cont-social-link" aria-label="Compartir"><span class="ico">share</span></a>
+            <a href="#" class="cont-social-link" aria-label="Foro / chat"><span class="ico">forum</span></a>
+          </div>
+        </div>
+
+        <div class="cont-form-wrap">
+          <h3 class="cont-form-tit">Envíanos un mensaje</h3>
+
+          <div class="form-exito" id="exito-form" hidden>
+            <span class="ico">check_circle</span>
+            <p>¡Gracias! Tu mensaje fue enviado. Te contactaremos muy pronto.</p>
+          </div>
+
+          <form class="cont-form" id="form-contacto" novalidate>
+            <div class="form-fila">
+              <div class="form-grupo">
+                <label for="nombre" class="form-label">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Juan Pérez" required>
+                <span class="form-error" id="error-nombre"></span>
+              </div>
+              <div class="form-grupo">
+                <label for="mascota" class="form-label">Nombre de tu Mascota</label>
+                <input type="text" id="mascota" name="mascota" class="form-input" placeholder="Ej. Firulais">
+              </div>
+            </div>
+
+            <div class="form-grupo">
+              <label for="correo" class="form-label">Correo Electrónico *</label>
+              <input type="email" id="correo" name="correo" class="form-input" placeholder="tucorreo@ejemplo.com" required>
+              <span class="form-error" id="error-correo"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="servicio" class="form-label">Servicio de Interés</label>
+              <select id="servicio" name="servicio" class="form-select">
+                <option>Consulta General</option>
+                <option>Vacunación</option>
+                <option>Peluquería</option>
+                <option>Cirugía</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="form-grupo">
+              <label for="mensaje" class="form-label">¿En qué podemos ayudarte? *</label>
+              <textarea id="mensaje" name="mensaje" class="form-textarea" rows="3" placeholder="Describe brevemente el motivo de tu consulta..." required></textarea>
+              <span class="form-error" id="error-mensaje"></span>
+            </div>
+
+            <button type="submit" class="btn btn-prim btn-bloque">
+              <span class="ico">send</span>
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie-in">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <div class="pie-logo">
+          <img th:src="@{/galeria/logo.png}" alt="Logo TacnaVet">
+          <span>TacnaVet</span>
+        </div>
+        <p class="pie-txt">Comprometidos con la salud y bienestar de tu mejor amigo. Clínica integral con tecnología de punta y corazón</p>
+      </div>
+
+      <div class="pie-col">
+        <h4 class="pie-tit">Enlaces Rápidos</h4>
+        <ul class="pie-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#servicios">Nuestros Servicios</a></li>
+          <li><a href="#instalaciones">Instalaciones</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h4 class="pie-tit">Servicios</h4>
+        <ul class="pie-links">
+          <li><a href="#servicios">Medicina General</a></li>
+          <li><a href="#servicios">Cirugía Veterinaria</a></li>
+          <li><a href="#servicios">Laboratorio Clínico</a></li>
+          <li><a href="#servicios">Peluquería Canina</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h4 class="pie-tit">Emergencias</h4>
+        <div class="pie-emerg">
+          <p>Atención 24/7 para emergencias críticas.</p>
+          <p class="pie-emerg-num">
+            <span class="ico">phone_in_talk</span>
+            993 076 339
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pie-bottom">
+      <div class="pie-legal">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos de Servicio</a>
+        <a href="#">Trabaja con Nosotros</a>
+      </div>
+      <p>© <span id="anio-actual"></span> TacnaVet - Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<button class="subir" id="boton-subir" aria-label="Volver arriba">
+  <span class="ico">arrow_upward</span>
+</button>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
